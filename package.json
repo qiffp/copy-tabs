@@ -4,6 +4,7 @@
   "id": "jid1-H8WaBPKvV07TjQ",
   "description": "Copy a list of your open tabs",
   "author": "Sam Dye",
+  "homepage": "https://www.github.com/qiffp",
   "license": "MPL 2.0",
   "version": "0.1",
   "icon": "data/icon-32.png",
@@ -14,14 +15,16 @@
       "title": "List separator",
       "description": "",
       "type": "string",
-      "value": "\n"
+      "value": "\n",
+      "hidden": true
     },
     {
       "name": "includePinned",
       "title": "Include pinned tabs",
       "description": "",
       "type": "bool",
-      "value": false
+      "value": false,
+      "hidden": true
     }
   ]
 }
