@@ -1,7 +1,7 @@
 $(function() {
   self.port.emit("ready");
   self.port.on("defaults", function(defaults) {
-    $("#separator-input").val(defaults.separator.replace(/[\n]/g, "\\n"));
+    $("#separator-input").val(defaults.separator.replace("\n", "\\n").replace("\r", "\\r"));
     $("#include-pinned-checkbox").prop("checked", defaults.includePinned);
   });
 
@@ -18,7 +18,7 @@ $(function() {
   $("#separator-input").change(function() {
     self.port.emit("update-settings", {
       setting: "separator",
-      value: $(this).val()
+      value: $(this).val().replace("\\n", "\n").replace("\\r", "\r")
     });
   });
 

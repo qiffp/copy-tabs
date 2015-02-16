@@ -15,7 +15,7 @@
       "title": "List separator",
       "description": "",
       "type": "string",
-      "value": "\n",
+      "value": "\\n",
       "hidden": true
     },
     {
